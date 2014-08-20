@@ -1121,6 +1121,11 @@
               return _$scope.getCount(list.id, _$scope.route.listID);
             };
           };
+          this._$scope.filterTasksByList = function() {
+            return function(task) {
+              return _$scope.route.listID === task.calendarid;
+            };
+          };
           this._$scope.getCount = function(listID, type) {
             return _$listsmodel.getCount(listID, type);
           };
