@@ -124,6 +124,10 @@ SettingsBusinessLayer) ->
 				return (list) ->
 					return _$scope.getCount(list.id,_$scope.route.listID)
 
+			@_$scope.filterTasksByList = () ->
+				return (task) ->
+					return _$scope.route.listID == task.calendarid
+
 			@_$scope.getCount = (listID,type) ->
 				return _$listsmodel.getCount(listID,type)
 
