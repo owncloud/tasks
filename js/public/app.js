@@ -1100,6 +1100,11 @@
           this._$scope.toggleHidden = function() {
             return _settingsbusinesslayer.toggle('various', 'showHidden');
           };
+          this._$scope.filterCalendar = function() {
+        	  return function( task ){
+        		  return task.calendarid == _$scope.route.listID;
+        	  };
+          };
           this._$scope.filterTasks = function() {
             return function(task) {
               switch (_$scope.route.listID) {
