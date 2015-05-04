@@ -22,6 +22,7 @@
 
 namespace OCA\Tasks\AppInfo;
 
+use OCA\Tasks\Service\TasksService;
 use \OCP\AppFramework\App;
 use \OCA\Tasks\Controller\PageController;
 use \OCA\Tasks\Controller\CollectionsController;
@@ -79,6 +80,16 @@ class Application extends App {
 			return new TasksController(
 				$c->query('AppName'), 
 				$c->query('Request'),
+				$c->query('TasksService'),
+				$c->query('UserId')
+			);
+		});
+
+		/**
+		 * Services
+		 */
+		$container->registerService('TasksService', function($c) {
+			return new TasksService(
 				$c->query('UserId')
 			);
 		});
