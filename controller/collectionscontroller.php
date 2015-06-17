@@ -43,7 +43,6 @@ class CollectionsController extends Controller {
 
 	/**
 	 * @NoAdminRequired
-         * @NoCSRFRequired
 	 */
 	public function getCollections(){
 		$collections = array(
