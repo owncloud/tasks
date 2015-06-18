@@ -232,3 +232,8 @@ Various
 *.ai
 *.bat
 *.rej
+
+#######
+Netbeans
+#######
+/nbproject/

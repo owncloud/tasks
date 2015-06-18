@@ -46,36 +46,42 @@ class CollectionsController extends Controller {
 	 */
 	public function getCollections(){
 		$collections = array(
-			array(
+                        array(
+				'id' => "all",
+				'displayname' => (string)$this->l10n->t('All'),
+				'show' => 2,
+                                'default' => 1),
+                        array(
 				'id' => "starred",
 				'displayname' => (string)$this->l10n->t('Important'),
-				'show' => 2),
+				'show' => 2,
+                                'default' => 2),
+                        array(
+				'id' => "current",
+				'displayname' => (string)$this->l10n->t('Current'),
+				'show' => 2,
+                                'default' => 0),
 			array(
 				'id' => "today",
 				'displayname' => (string)$this->l10n->t('Today'),
-				'show' => 2),
+				'show' => 2,
+                                'default' => 2),
 			array(
 				'id' => "week",
 				'displayname' => (string)$this->l10n->t('Week'),
-				'show' => 2),
-			array(
-				'id' => "all",
-				'displayname' => (string)$this->l10n->t('All'),
-				'show' => 2),
-			array(
-				'id' => "current",
-				'displayname' => (string)$this->l10n->t('Current'),
-				'show' => 2),
+				'show' => 2,
+                                'default' => 2),
 			array(
 				'id' => "completed",
 				'displayname' => (string)$this->l10n->t('Completed'),
-				'show' => 2)
+				'show' => 2,
+                                'default' => 0)
 		);
 		foreach ($collections as $key => $collection){
 			try{
 				$tmp = $this->settings->getUserValue($this->userId, $this->appName,'show_'.$collection['id']);
-				if (!in_array((int)$tmp, array(0,1,2)) || $tmp === null) {
-					$tmp = 2;
+				if (!in_array((int)$tmp, array(0,1,2)) || empty($tmp)) {
+					$tmp = $collection['default'];
 					$this->settings->setUserValue($this->userId, $this->appName,'show_'.$collection['id'],$tmp);
 				}
 				$collections[$key]['show'] = (int)$tmp;
