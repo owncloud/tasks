@@ -37,7 +37,7 @@ class TasksController extends Controller {
 	public function __construct($appName, IRequest $request, TasksService $tasksService, $userId){
 		parent::__construct($appName, $request);
 		$this->tasksService = $tasksService;
-		$this->userId = $userId;		
+		$this->userId = $userId;
 	}
 
 	/**
