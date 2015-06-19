@@ -63,7 +63,9 @@ class TasksController extends Controller {
 				if(is_null($task['summary'])) {
 					continue;
 				}
-				$vtodo = Helper::parseVTODO($task['calendardata']);
+				if(!($vtodo = Helper::parseVTODO($task))){
+					continue;
+				}
 				try {
 					$task_data = Helper::arrayForJSON($task['id'], $vtodo, $user_timezone, $calendar['id']);
 					switch($type){
@@ -127,12 +129,13 @@ class TasksController extends Controller {
 		$user_timezone = \OC_Calendar_App::getTimezone();
 		$task = array();
 		if($object['objecttype']=='VTODO' && !is_null($object['summary'])) {
-			$vtodo = Helper::parseVTODO($object['calendardata']);
-			try {
-				$task_data = Helper::arrayForJSON($object['id'], $vtodo, $user_timezone, $object['calendarid']);
-				$task[] = $task_data;
-			} catch(\Exception $e) {
-				\OCP\Util::writeLog('tasks', $e->getMessage(), \OCP\Util::ERROR);
+			if($vtodo = Helper::parseVTODO($object)){
+				try {
+					$task_data = Helper::arrayForJSON($object['id'], $vtodo, $user_timezone, $object['calendarid']);
+					$task[] = $task_data;
+				} catch(\Exception $e) {
+					\OCP\Util::writeLog('tasks', $e->getMessage(), \OCP\Util::ERROR);
+				}	
 			}	
 		}
 		$result = array(
