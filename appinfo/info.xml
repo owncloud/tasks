@@ -7,4 +7,7 @@
 	<author>Raimund Schlüßler</author>
 	<require>8</require>
 	<description>Task App for Calender TODOs</description>
+    <dependencies>
+        <owncloud min-version="8.0" max-version="8.0"/>
+    </dependencies>
 </info>
