@@ -43,32 +43,28 @@ class TasksService {
 				if(!($vtodo = Helper::parseVTODO($task))){
 					continue;
 				}
-				try {
-					$task_data = Helper::arrayForJSON($task['id'], $vtodo, $user_timezone, $calendar['id']);
-					switch($type){
-						case 'all':
+				$task_data = Helper::arrayForJSON($task['id'], $vtodo, $user_timezone, $calendar['id']);
+				switch($type) {
+					case 'all':
+						$tasks[] = $task_data;
+						break;
+					case 'init':
+						if (!$task_data['completed']) {
 							$tasks[] = $task_data;
-							break;
-						case 'init':
-							if (!$task_data['completed']){
-								$tasks[] = $task_data;
-							} else {
-								$tasks_selected[] = $task_data;
-							}
-							break;
-						case 'completed':
-							if ($task_data['completed']){
-								$tasks[] = $task_data;
-							}
-							break;
-						case 'uncompleted':
-							if (!$task_data['completed']){
-								$tasks[] = $task_data;
-							}
-							break;
-					}
-				} catch(\Exception $e) {
-					\OCP\Util::writeLog('tasks', $e->getMessage(), \OCP\Util::ERROR);
+						} else {
+							$tasks_selected[] = $task_data;
+						}
+						break;
+					case 'completed':
+						if ($task_data['completed']) {
+							$tasks[] = $task_data;
+						}
+						break;
+					case 'uncompleted':
+						if (!$task_data['completed']) {
+							$tasks[] = $task_data;
+						}
+						break;
 				}
 			}
 			$nrCompleted = 0;
@@ -105,12 +101,8 @@ class TasksService {
 		$task = array();
 		if($object['objecttype']=='VTODO' && !is_null($object['summary'])) {
 			if($vtodo = Helper::parseVTODO($object)){
-				try {
-					$task_data = Helper::arrayForJSON($object['id'], $vtodo, $user_timezone, $object['calendarid']);
-					$task[] = $task_data;
-				} catch(\Exception $e) {
-					\OCP\Util::writeLog('tasks', $e->getMessage(), \OCP\Util::ERROR);
-				}
+				$task_data = Helper::arrayForJSON($object['id'], $vtodo, $user_timezone, $object['calendarid']);
+				$task[] = $task_data;
 			}
 		}
 		return array(
