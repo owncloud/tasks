@@ -25,11 +25,10 @@ namespace OCA\Tasks\Controller;
 
 use \OCA\Tasks\Service\TasksService;
 use \OCP\IRequest;
-use \OCP\AppFramework\Controller;
 use \OCP\AppFramework\Http\JSONResponse;
 
 
-class TasksController extends Controller {
+class TasksController extends WebController {
 
 	private $tasksService;
 
@@ -42,22 +41,24 @@ class TasksController extends Controller {
 	 * @NoAdminRequired
 	 */
 	public function getTasks($listID = 'all', $type = 'all'){
-		$result = $this->tasksService->getAll($listID, $type);
-		$response = array(
-			'data' => $result
-		);
-		return (new JSONResponse())->setData($response);
+		try {
+			$result = $this->tasksService->getAll($listID, $type);
+			return $this->success($result);
+		} catch(\Exception $e) {
+			return $this->success($e->getMessage());
+		}
 	}
 
 	/**
 	 * @NoAdminRequired
 	 */
 	public function getTask($taskID){
-		$result = $this->tasksService->get($taskID);
-		$response = array(
-			'data' => $result
-		);
-		return (new JSONResponse())->setData($response);
+		try {
+			$result = $this->tasksService->get($taskID);
+			return $this->success($result);
+		} catch (\Exception $e) {
+			return $this->error($e->getMessage());
+		}
 	}
 
 	/**
