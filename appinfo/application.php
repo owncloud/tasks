@@ -29,9 +29,13 @@ use \OCA\Tasks\Controller\ListsController;
 use \OCA\Tasks\Controller\SettingsController;
 use \OCA\Tasks\Controller\TasksController;
 use \OCA\Tasks\Service\TasksService;
+use \OCA\Tasks\Service\SearchService;
 use \OCA\Tasks\Service\ListsService;
 use \OCA\Tasks\Service\CollectionsService;
 use \OCA\Tasks\Service\SettingsService;
+use \OCA\Tasks\Service\Helper;
+use \OCA\Tasks\Service\TaskParser;
+use \OCA\Tasks\Db\TasksMapper;
 
 class Application extends App {
 
@@ -90,7 +94,10 @@ class Application extends App {
 		 */
 		$container->registerService('TasksService', function($c) {
 			return new TasksService(
-				$c->query('UserId')
+				$c->query('UserId'),
+				$c->query('TasksMapper'),
+				$c->query('Helper'),
+				$c->query('TaskParser')
 			);
 		});
 
@@ -117,6 +124,25 @@ class Application extends App {
 			);
 		});
 
+		$container->registerService('SearchService', function($c) {
+			return new SearchService(
+				$c->query('TasksMapper'),
+				$c->query('Helper'),
+				$c->query('TaskParser')
+			);
+		});
+
+		$container->registerService('Helper', function($c) {
+			return new Helper(
+				$c->query('TaskParser')
+			);
+		});
+
+		$container->registerService('TaskParser', function() {
+			return new TaskParser(
+			);
+		});
+
 		/**
 		 * Core
 		 */
@@ -132,7 +158,16 @@ class Application extends App {
 			return $c->query('ServerContainer')->getConfig();
 		});
 
-		\OC::$server->getSearch()->registerProvider('OCA\Tasks\Controller\SearchController', array('apps' => array('tasks')));
+		\OC::$server->getSearch()->registerProvider('OCA\Tasks\Controller\SearchProvider', array('apps' => array('tasks')));
+
+		/**
+		 * Database Layer
+		 */
+		$container->registerService('TasksMapper', function($c) {
+			return new TasksMapper(
+				$c->query('ServerContainer')->getDb()
+			);
+		});
 		
 	}
 
