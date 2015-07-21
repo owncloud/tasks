@@ -35,7 +35,10 @@ use \OCA\Tasks\Service\CollectionsService;
 use \OCA\Tasks\Service\SettingsService;
 use \OCA\Tasks\Service\Helper;
 use \OCA\Tasks\Service\TaskParser;
+use \OCA\Tasks\Service\CalendarParser;
+use \OCA\Tasks\Service\CalendarService;
 use \OCA\Tasks\Db\TasksMapper;
+use \OCA\Tasks\Db\CalendarMapper;
 
 class Application extends App {
 
@@ -103,7 +106,8 @@ class Application extends App {
 
 		$container->registerService('ListsService', function($c) {
 			return new ListsService(
-				$c->query('UserId')
+				$c->query('UserId'),
+				$c->query('CalendarService')
 			);
 		});
 
@@ -124,6 +128,14 @@ class Application extends App {
 			);
 		});
 
+		$container->registerService('CalendarService', function($c) {
+			return new CalendarService(
+				$c->query('UserId'),
+				$c->query('CalendarsMapper'),
+				$c->query('CalendarParser')
+			);
+		});
+
 		$container->registerService('SearchService', function($c) {
 			return new SearchService(
 				$c->query('TasksMapper'),
@@ -140,6 +152,11 @@ class Application extends App {
 
 		$container->registerService('TaskParser', function() {
 			return new TaskParser(
+			);
+		});
+
+		$container->registerService('CalendarParser', function() {
+			return new CalendarParser(
 			);
 		});
 
@@ -165,6 +182,12 @@ class Application extends App {
 		 */
 		$container->registerService('TasksMapper', function($c) {
 			return new TasksMapper(
+				$c->query('ServerContainer')->getDb()
+			);
+		});
+
+		$container->registerService('CalendarsMapper', function($c) {
+			return new CalendarsMapper(
 				$c->query('ServerContainer')->getDb()
 			);
 		});
