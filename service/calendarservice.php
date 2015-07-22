@@ -2,6 +2,7 @@
 namespace OCA\Tasks\Service;
 
 use \OCA\Tasks\Db\CalendarsMapper;
+use \OCP\Constants;
 
 class CalendarService {
 
@@ -56,7 +57,6 @@ class CalendarService {
 
 	// TODO
 	private function getCalendarPermissions() {
-		return 31;
-		// return OCP\PERMISSION_ALL;
+		return Constants::PERMISSION_ALL;
 	}
 }
