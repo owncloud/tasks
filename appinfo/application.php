@@ -38,7 +38,7 @@ use \OCA\Tasks\Service\TaskParser;
 use \OCA\Tasks\Service\CalendarParser;
 use \OCA\Tasks\Service\CalendarService;
 use \OCA\Tasks\Db\TasksMapper;
-use \OCA\Tasks\Db\CalendarMapper;
+use \OCA\Tasks\Db\CalendarsMapper;
 
 class Application extends App {
 
