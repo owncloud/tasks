@@ -29,9 +29,16 @@ use \OCA\Tasks\Controller\ListsController;
 use \OCA\Tasks\Controller\SettingsController;
 use \OCA\Tasks\Controller\TasksController;
 use \OCA\Tasks\Service\TasksService;
+use \OCA\Tasks\Service\SearchService;
 use \OCA\Tasks\Service\ListsService;
 use \OCA\Tasks\Service\CollectionsService;
 use \OCA\Tasks\Service\SettingsService;
+use \OCA\Tasks\Service\Helper;
+use \OCA\Tasks\Service\TaskParser;
+use \OCA\Tasks\Service\CalendarParser;
+use \OCA\Tasks\Service\CalendarService;
+use \OCA\Tasks\Db\TasksMapper;
+use \OCA\Tasks\Db\CalendarsMapper;
 
 class Application extends App {
 
@@ -90,13 +97,17 @@ class Application extends App {
 		 */
 		$container->registerService('TasksService', function($c) {
 			return new TasksService(
-				$c->query('UserId')
+				$c->query('UserId'),
+				$c->query('TasksMapper'),
+				$c->query('Helper'),
+				$c->query('TaskParser')
 			);
 		});
 
 		$container->registerService('ListsService', function($c) {
 			return new ListsService(
-				$c->query('UserId')
+				$c->query('UserId'),
+				$c->query('CalendarService')
 			);
 		});
 
@@ -117,6 +128,38 @@ class Application extends App {
 			);
 		});
 
+		$container->registerService('CalendarService', function($c) {
+			return new CalendarService(
+				$c->query('UserId'),
+				$c->query('CalendarsMapper'),
+				$c->query('CalendarParser')
+			);
+		});
+
+		$container->registerService('SearchService', function($c) {
+			return new SearchService(
+				$c->query('TasksMapper'),
+				$c->query('Helper'),
+				$c->query('TaskParser')
+			);
+		});
+
+		$container->registerService('Helper', function($c) {
+			return new Helper(
+				$c->query('TaskParser')
+			);
+		});
+
+		$container->registerService('TaskParser', function() {
+			return new TaskParser(
+			);
+		});
+
+		$container->registerService('CalendarParser', function() {
+			return new CalendarParser(
+			);
+		});
+
 		/**
 		 * Core
 		 */
@@ -132,7 +175,22 @@ class Application extends App {
 			return $c->query('ServerContainer')->getConfig();
 		});
 
-		\OC::$server->getSearch()->registerProvider('OCA\Tasks\Controller\SearchController', array('apps' => array('tasks')));
+		\OC::$server->getSearch()->registerProvider('OCA\Tasks\Controller\SearchProvider', array('apps' => array('tasks')));
+
+		/**
+		 * Database Layer
+		 */
+		$container->registerService('TasksMapper', function($c) {
+			return new TasksMapper(
+				$c->query('ServerContainer')->getDb()
+			);
+		});
+
+		$container->registerService('CalendarsMapper', function($c) {
+			return new CalendarsMapper(
+				$c->query('ServerContainer')->getDb()
+			);
+		});
 		
 	}
 

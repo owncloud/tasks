@@ -62,7 +62,7 @@ class TasksController extends Controller {
 	 */
 	public function setPriority($taskID,$priority){
 		return $this->generateResponse(function () use ($taskID, $priority) {
-			return $this->tasksService->setPriority($taskID, $priority);
+			return $this->tasksService->priority($taskID, $priority);
 		});
 	}
 

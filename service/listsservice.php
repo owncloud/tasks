@@ -4,9 +4,11 @@ namespace OCA\Tasks\Service;
 class ListsService {
 
 	private $userId;
+	private $calendarService;
 
-	public function __construct($userId) {
+	public function __construct($userId, CalendarService $calendarService) {
 		$this->userId = $userId;
+		$this->calendarService = $calendarService;
 	}
 
 	/**
@@ -15,8 +17,7 @@ class ListsService {
 	 * @return array
 	 */
 	public function getAll() {
-		$calendar = new \OC_Calendar_Calendar();
-		$lists = $calendar::allCalendars($this->userId, true);
+		$lists = $this->calendarService->getAllCalendars(true);
 		return $lists;
 	}
 
@@ -33,7 +34,7 @@ class ListsService {
 			// OCP\JSON::error(array('message'=>'empty'));
 			exit;
 		}
-		$calendars = \OC_Calendar_Calendar::allCalendars($this->userId, true);
+		$calendars = $this->calendarService->getAllCalendars(true);
 		foreach($calendars as $cal) {
 			if($cal['displayname'] == $name) {
 				// OCP\JSON::error(array('message'=>'namenotavailable'));
@@ -83,7 +84,7 @@ class ListsService {
 			// OCP\JSON::error(array('message'=>'empty'));
 			exit;
 		}
-		$calendars = \OC_Calendar_Calendar::allCalendars($this->userId, true);
+		$calendars = $this->calendarService->getAllCalendars(true);
 		foreach($calendars as $cal) {
 			if($cal['userid'] != $this->userId){
 				continue;

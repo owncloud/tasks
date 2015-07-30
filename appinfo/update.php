@@ -55,6 +55,7 @@ if ( version_compare($installedVersionTasksEnhanced, '0.4.1', '<=') && version_c
 					}
 					$data = $vcalendar->serialize();
 					$oldobject = \OC_Calendar_Object::find($taskId);
+					// $this->tasksMapper->findVTODOById($taskID);
 
 					$object = \Sabre\VObject\Reader::read($data);
 
