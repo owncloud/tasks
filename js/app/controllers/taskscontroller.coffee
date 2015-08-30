@@ -80,10 +80,14 @@ SettingsBusinessLayer, SearchBusinessLayer) ->
 				_$scope.status.addSubtaskTo = uid
 
 			@_$scope.showInput = () ->
-				if _$scope.route.listID in ['completed', 'week']
-					return false
+				listID = _$scope.route.listID
+				if angular.isUndefined(_$collectionsmodel.getById(listID))
+					return _$listsmodel.checkPermission(listID,OC.PERMISSION_CREATE)
 				else
-					return true
+					if listID in ['completed', 'week']
+						return false
+					else
+						return true
 
 			@_$scope.focusTaskInput = () ->
 				_$scope.status.focusTaskInput = true

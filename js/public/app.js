@@ -1099,11 +1099,16 @@
             return _$scope.status.addSubtaskTo = uid;
           };
           this._$scope.showInput = function() {
-            var _ref;
-            if ((_ref = _$scope.route.listID) === 'completed' || _ref === 'week') {
-              return false;
+            var listID;
+            listID = _$scope.route.listID;
+            if (angular.isUndefined(_$collectionsmodel.getById(listID))) {
+              return _$listsmodel.checkPermission(listID, OC.PERMISSION_CREATE);
             } else {
-              return true;
+              if (listID === 'completed' || listID === 'week') {
+                return false;
+              } else {
+                return true;
+              }
             }
           };
           this._$scope.focusTaskInput = function() {
@@ -2431,6 +2436,20 @@
             return '';
           } else {
             return this.getById(listID).displayname;
+          }
+        };
+
+        ListsModel.prototype.checkPermission = function(listID, permission) {
+          var userPermission;
+          if (angular.isUndefined(this.getById(listID))) {
+            return false;
+          } else {
+            userPermission = this.getById(listID).permissions;
+            if (userPermission & permission) {
+              return true;
+            } else {
+              return false;
+            }
           }
         };
 

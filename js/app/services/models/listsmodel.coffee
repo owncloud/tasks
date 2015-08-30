@@ -124,6 +124,16 @@ angular.module('Tasks').factory 'ListsModel',
 				return ''
 			else
 				return @getById(listID).displayname
+		
+		checkPermission: (listID,permission) ->
+			if angular.isUndefined(@getById(listID))
+				return false
+			else
+				userPermission = @getById(listID).permissions
+				if userPermission & permission
+					return true
+				else
+					return false
 
 	return new ListsModel(TasksModel)
 ]
