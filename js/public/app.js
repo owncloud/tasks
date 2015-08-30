@@ -1118,10 +1118,15 @@
             return _$scope.status.focusSubtaskInput = true;
           };
           this._$scope.openDetails = function(id, $event) {
-            var listID;
-            if ($($event.currentTarget).is($($event.target).closest('.handler'))) {
-              listID = _$scope.route.listID;
-              return $location.path('/lists/' + listID + '/tasks/' + id);
+            var listID, task;
+            task = _$tasksmodel.getById(id);
+            if (task.is_editable === false) {
+              return false;
+            } else {
+              if ($($event.currentTarget).is($($event.target).closest('.handler'))) {
+                listID = _$scope.route.listID;
+                return $location.path('/lists/' + listID + '/tasks/' + id);
+              }
             }
           };
           this._$scope.toggleCompleted = function(taskID) {

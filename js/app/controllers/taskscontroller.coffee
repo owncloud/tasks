@@ -96,9 +96,13 @@ SettingsBusinessLayer, SearchBusinessLayer) ->
 				_$scope.status.focusSubtaskInput = true
 
 			@_$scope.openDetails = (id,$event) ->
-				if $($event.currentTarget).is($($event.target).closest('.handler'))
-					listID = _$scope.route.listID
-					$location.path('/lists/'+listID+'/tasks/'+id)
+				task = _$tasksmodel.getById(id)
+				if task.is_editable == false
+					return false
+				else
+					if $($event.currentTarget).is($($event.target).closest('.handler'))
+						listID = _$scope.route.listID
+						$location.path('/lists/'+listID+'/tasks/'+id)
 
 			@_$scope.toggleCompleted = (taskID) ->
 				if _$tasksmodel.completed(taskID)
