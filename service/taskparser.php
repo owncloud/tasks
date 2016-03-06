@@ -51,7 +51,10 @@ Class TaskParser {
 		$task['created'] 	= (string) $vtodo->CREATED;
 		$task['note'] 		= (string) $vtodo->DESCRIPTION;
 		$task['location'] 	= (string) $vtodo->LOCATION;
+		$task['class'] 		= (string) $vtodo->CLASS;
 		$task['categories'] 	= $this->parseCategories($vtodo->CATEGORIES);
+		$task['is_editable']    = $this->helper->checkTaskPermission($vtodo, $calendarID, \OCP\Constants::PERMISSION_UPDATE);
+		$task['is_deletable']   = $this->helper->checkTaskPermission($vtodo, $calendarID, \OCP\Constants::PERMISSION_DELETE);
 		$task['start'] 			= $this->helper->parseDateObject($vtodo->DTSTART);
 		$task['due'] 			= $this->helper->parseDateObject($vtodo->DUE);
 		$task['completed_date'] = $this->helper->parseDateObject($vtodo->COMPLETED);

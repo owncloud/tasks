@@ -89,10 +89,14 @@ SettingsBusinessLayer, SearchBusinessLayer) ->
 					return  task.hidesubtasks
 
 			@_$scope.showInput = () ->
-				if _$scope.route.listID in ['completed', 'week']
-					return false
+				listID = _$scope.route.listID
+				if angular.isUndefined(_$collectionsmodel.getById(listID))
+					return _$listsmodel.checkPermission(listID,OC.PERMISSION_CREATE)
 				else
-					return true
+					if listID in ['completed', 'week']
+						return false
+					else
+						return true
 
 			@_$scope.focusTaskInput = () ->
 				_$scope.status.focusTaskInput = true
@@ -101,9 +105,13 @@ SettingsBusinessLayer, SearchBusinessLayer) ->
 				_$scope.status.focusSubtaskInput = true
 
 			@_$scope.openDetails = (id,$event) ->
-				if $($event.currentTarget).is($($event.target).closest('.handler'))
-					listID = _$scope.route.listID
-					$location.path('/lists/'+listID+'/tasks/'+id)
+				task = _$tasksmodel.getById(id)
+				if task.is_editable == false
+					return false
+				else
+					if $($event.currentTarget).is($($event.target).closest('.handler'))
+						listID = _$scope.route.listID
+						$location.path('/lists/'+listID+'/tasks/'+id)
 
 			@_$scope.toggleCompleted = (taskID) ->
 				if _$tasksmodel.completed(taskID)

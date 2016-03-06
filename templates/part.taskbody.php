@@ -3,11 +3,11 @@
     taskID="{{ task.id }}"
     ng-class="{active: route.taskID==task.id, subtasks: hasSubtasks(task), subtaskshidden: task.hidesubtasks, attachment: task.note!=''}">
     <div class="percentdone" style="width:{{ task.complete }}%; background-color:{{ getTaskColor(task.calendarid) }};"></div>
-    <a class="task-checkbox handler" name="toggleCompleted" ng-click="toggleCompleted(task.id)">
+    <a class="task-checkbox handler" ng-show="task.is_editable" name="toggleCompleted" ng-click="toggleCompleted(task.id)">
         <span class="icon task-checkbox" ng-class="{'task-checked': task.completed}"></span>
     </a>
     <a class="icon task-separator"></a>
-    <a class="task-star handler" ng-click="toggleStarred(task.id)">
+    <a class="task-star handler" ng-show="task.is_editable" ng-click="toggleStarred(task.id)">
         <span class="icon large task-star faded" ng-class="{'high':task.priority>5,'medium':task.priority==5,'low':task.priority > 0 && task.priority < 5}"></span>
     </a>
     <a class="task-addsubtask handler add-subtask" ng-click="showSubtaskInput(task.uid)" oc-click-focus="{selector: '.add-subtask input', timeout: 0}">

@@ -52,6 +52,30 @@ Class Helper {
 		$vtodo->ID = $taskID;
 		return $vtodo;
 	}
+	
+	/**
+	 * check if permission is set
+	 *
+	 * @param mixed $vtodo
+	 * @param int $calendarID
+	 * @param int $permission
+	 * @return bool
+	 */
+	public function checkTaskPermission($vtodo, $calendarID, $permission) {
+		$calendar = \OC_Calendar_Calendar::find($calendarID);
+		if ($calendar["userid"] === \OC::$server->getUserSession()->getUser()->getUID()) {
+			return true;
+		} elseif ($calendar["permissions"] & $permission) {
+			$sharedAccessClassPermissions = \OC_Calendar_App::getAccessClassPermissions($vtodo->CLASS);
+			if (!($sharedAccessClassPermissions & $permission)) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			return false; 
+		}
+	}
 
 	/**
 	 * read object from calendar data

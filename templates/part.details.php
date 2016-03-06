@@ -150,7 +150,7 @@
                 <input type="text" placeholder="{{ commentStrings().input }}" ng-model="CommentContent" ng-keydown="sendComment($event)">
                 <input type="button" ng-click="addComment()" name="addComment" value="{{ commentStrings().button }}" ng-class="{'active':CommentContent}">
             </div>
-        	<a class="detail-trash handler close-all" ng-click="deleteTask(task.id)">
+        	<a class="detail-trash handler close-all" ng-show="task.is_deletable" ng-click="deleteTask(task.id)">
             	<span class="icon detail-trash"></span>
             </a>
             <a class="detail-close handler close-all">
