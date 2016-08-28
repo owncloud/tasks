@@ -217,6 +217,11 @@ angular.module('Tasks').factory('TasksBusinessLayer', [
 				this.doUpdate(task);
 			};
 
+ 			TasksBusinessLayer.prototype.setAllDay = function(task, allDay) {
+ 				task.allDay = allDay;
+ 				this.doUpdate(task);
+ 			};
+ 
 			TasksBusinessLayer.prototype.initReminder = function(taskID) {
 				var p, task;
 				if (!this.checkReminderDate(taskID)) {
