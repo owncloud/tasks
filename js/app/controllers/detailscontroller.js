@@ -291,7 +291,7 @@ angular.module('Tasks').controller('DetailsController', [
 				};
 
  				this._$scope.isAllDayPossible = function(task) {
- 					return task.calendar.writable && (task.due || task.start);
+ 					return !angular.isUndefined(task) && task.calendar.writable && (task.due || task.start);
  				};
  				this._$scope.toggleAllDay = function(task) {
  					_tasksbusinesslayer.setAllDay(task, !task.allDay);

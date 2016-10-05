@@ -49,7 +49,9 @@
             </div>
             <div class="section detail-all-day handler" ng-click="toggleAllDay(task)" ng-if="isAllDayPossible(task)">
                     <span class="icon detail-checkbox disabled" ng-class="{'detail-checked': task.allDay, 'disabled': !task.calendar.writable}"></span>
-                    <text><?php p($l->t('All day')); ?></text>
+                    <div class="section-title">
+                        <text><?php p($l->t('All day')); ?></text>
+                    </div>
             </div>
 
 <!--             <div class="section detail-reminder handler" ng-class="{'date':isDue(task.reminder.date), 'editing':route.parameter=='reminder'}" ng-click="editReminder($event, task)">

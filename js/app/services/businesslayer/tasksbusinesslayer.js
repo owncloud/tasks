@@ -144,6 +144,7 @@ angular.module('Tasks').factory('TasksBusinessLayer', [
 				if (type === null) {
 					type = 'day';
 				}
+				var allDay = task.allDay;
 				var due = moment(task.due, "YYYY-MM-DDTHH:mm:ss");
 				if (type === 'day') {
 					if (moment(due).isValid()) {
@@ -163,6 +164,7 @@ angular.module('Tasks').factory('TasksBusinessLayer', [
 					return;
 				}
 				task.due = due.format('YYYY-MM-DDTHH:mm:ss');
+				task.due.isDate = allDay;
 				// this.checkReminderDate(task);
 				this.doUpdate(task);
 			};
@@ -187,6 +189,7 @@ angular.module('Tasks').factory('TasksBusinessLayer', [
 				if (type === null) {
 					type = 'day';
 				}
+				var allDay = task.allDay;
 				var start = moment(task.start, "YYYY-MM-DDTHH:mm:ss");
 				if (type === 'day') {
 					if (moment(start).isValid()) {
@@ -204,6 +207,7 @@ angular.module('Tasks').factory('TasksBusinessLayer', [
 					return;
 				}
 				task.start = start.format('YYYY-MM-DDTHH:mm:ss');
+				task.start.isDate = allDay;
 				// this.checkReminderDate(taskID);
 				this.doUpdate(task);
 			};
