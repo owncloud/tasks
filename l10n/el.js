@@ -95,6 +95,8 @@ OC.L10N.register(
     "Start of week" : "Αρχή της εβδομάδας",
     "Visibility of Smart Collections" : "Ορατότητα Έξυπνων Συλλογών",
     "Default" : "Προκαθορισμένο",
+    "Alphabetically" : "Αλφαβητικά",
+    "Manually" : "Χειροκίνητα",
     "Load remaining completed tasks." : "Φόρτωση απομένοντων ολοκληρωμένων εργασιών",
     "(New category)" : "(Νέα κατηγορία)",
     "Select categories..." : "Επιλογή κατηγοριών...",
