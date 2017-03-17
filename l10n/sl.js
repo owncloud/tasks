@@ -47,7 +47,7 @@ OC.L10N.register(
     "Comment" : "Opomba",
     "Add a comment" : "Dodaj opombo",
     "This will delete the Calendar \"%s\" and all of its entries." : "Izbrisan bo koledar \"%s\" in vsi vpisani vnosi.",
-    "The name \"%s\" is already used." : "Ime \"%s\" je že v uporabi.",
+    "The name \"%s\" is already used." : "Ime »%s« je že v uporabi.",
     "An empty name is not allowed." : "Prazno polje imena ni dovoljeno.",
     "Hidden" : "Skrito",
     "Visible" : "Vidno",
