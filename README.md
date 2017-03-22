@@ -1,8 +1,3 @@
-# We have moved!
-## This app is now maintained at: https://github.com/nextcloud/tasks
-
--------------------------
-
 # Tasks
 
 [![Build Status](https://scrutinizer-ci.com/g/owncloud/tasks/badges/build.png?b=master)](https://scrutinizer-ci.com/g/owncloud/tasks/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/owncloud/tasks/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/owncloud/tasks/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/owncloud/tasks/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/owncloud/tasks/?branch=master)
