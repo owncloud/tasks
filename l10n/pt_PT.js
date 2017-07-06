@@ -105,7 +105,7 @@ OC.L10N.register(
     "Manually" : "Manualmente",
     "Load remaining completed tasks." : "Carregar as tarefas concluídas restantes.",
     "(New category)" : "(Nova categoria)",
-    "Select categories..." : "Seleccione categorias...",
+    "Select categories..." : "Selecione as categorias...",
     "Loading the task..." : "A carregar a tarefa...",
     "Task not found!" : "Tarefa não encontrada!",
     "add a subtask to" : "adicionar uma subtarefa a"

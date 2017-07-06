@@ -78,6 +78,7 @@ OC.L10N.register(
     "at the end" : "в кінці",
     "at the beginning" : "на початку",
     "Set start date" : "Встановити дату початку",
+    "{calendar} shared by {owner}" : "{calendar} опублікований користувачем {owner}",
     "Important" : "Важливий",
     "Week" : "Тиждень",
     "All" : "Всі",
