@@ -68,6 +68,9 @@ OC.L10N.register(
     "Minutes" : "Minūtes",
     "Set due date" : "Uzstādīt izpildes termiņu",
     "%s %% completed" : "%s %% izpildīti",
+    "high" : "augsts",
+    "medium" : "vidējs ",
+    "low" : "zems",
     "Remind me" : "Atgādināt",
     "at the end" : "beigās",
     "at the beginning" : "sākumā",
@@ -91,6 +94,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Viedo kolekciju redzamība",
     "Default" : "Noklusējuma",
     "Load remaining completed tasks." : "Ielādēt pārējos pabeigtos uzdevumus.",
+    "Select categories..." : "Izvēlēties kategorijas ",
     "Loading the task..." : "Ielādē uzdevumu...",
     "Task not found!" : "Uzdevums nav atrasts!"
 },

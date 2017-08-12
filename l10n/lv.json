@@ -66,6 +66,9 @@
     "Minutes" : "Minūtes",
     "Set due date" : "Uzstādīt izpildes termiņu",
     "%s %% completed" : "%s %% izpildīti",
+    "high" : "augsts",
+    "medium" : "vidējs ",
+    "low" : "zems",
     "Remind me" : "Atgādināt",
     "at the end" : "beigās",
     "at the beginning" : "sākumā",
@@ -89,6 +92,7 @@
     "Visibility of Smart Collections" : "Viedo kolekciju redzamība",
     "Default" : "Noklusējuma",
     "Load remaining completed tasks." : "Ielādēt pārējos pabeigtos uzdevumus.",
+    "Select categories..." : "Izvēlēties kategorijas ",
     "Loading the task..." : "Ielādē uzdevumu...",
     "Task not found!" : "Uzdevums nav atrasts!"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
