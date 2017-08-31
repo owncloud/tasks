@@ -2,6 +2,10 @@ OC.L10N.register(
     "tasks",
     {
     "Tasks" : "Take",
+    "Due yesterday" : "Gister verskuldig",
+    "Due today" : "Vandag verskuldig",
+    "Due tomorrow" : "Môre verskuldig",
+    "Due on" : "Verskuldig op",
     "Started yesterday" : "Het gister begin",
     "Starts today" : "Begin vandag",
     "Starts tomorrow" : "Begin môre",
@@ -56,6 +60,7 @@ OC.L10N.register(
     "Friday" : "Vrydag",
     "Saturday" : "Saterdag",
     "Add an important item in \"%s\"..." : "Voeg belangrike item toe tot “%s”…",
+    "Add an item due today in \"%s\"..." : "Voeg item vir vandag verskuldig toe in “%s”…",
     "Add an item in \"%s\"..." : "Voeg item toe tot “%s”…",
     "Add a current item in \"%s\"..." : "Voeg huidige item toe tot “%s”…",
     "Add a subtask to \"%s\"..." : "Voeg subtaak toe tot “%s”…",
