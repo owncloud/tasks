@@ -58,6 +58,7 @@
     "Friday" : "perjantai",
     "Saturday" : "lauantai",
     "Add an important item in \"%s\"..." : "Lisää tärkeä tietue kohteeseen \"%s\"...",
+    "Add an item due today in \"%s\"..." : "Lisää tämänpäiväinen tapahtuma kohteeseen \"%s\"...",
     "Add an item in \"%s\"..." : "Lisää tietue kohteeseen \"%s\"...",
     "Add a current item in \"%s\"..." : "Lisää %s:ään...",
     "Add a subtask to \"%s\"..." : "Lisää alitehtävä kohteeseen \"%s\"...",
