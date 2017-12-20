@@ -6,9 +6,12 @@
 	<namespace>Tasks</namespace>
 	<category>productivity</category>
 	<licence>AGPL</licence>
-	<author>Raimund Schlüßler</author>
-	<description>Task App for Calender TODOs</description>
-	<ocsid>164356</ocsid>
+	<author>Dan Landon</author>
+	<summary>ownCloud Tasks App for Calender</summary>
+	<description>Once enabled, a new Tasks menu will appear in your ownCloud apps menu. From there you can add and delete tasks, edit their title, description, start and due dates, reminder times, mark them as important, and add comments on them. Tasks can be shared between users. Tasks can be synchronized using CalDav (each task list is linked to an ownCloud calendar, to sync it to your local client - Thunderbird, Evolution, KDE Kontact, iCal... - just add the calendar as a remote calendar in you client). You can download your tasks as ICS files using the download button for each calendar.</description>
+	<screenshot>https://github.com/owncloud/tasks/raw/master/screenshots/screenshot.png</screenshot>
+	<bugs>https://github.com/owncloud/tasks/issues</bugs>
+	<repository type="git">https://github.com/owncloud/tasks.git</repository>
     <dependencies>
         <owncloud min-version="9.1" max-version="10.0"/>
     </dependencies>
