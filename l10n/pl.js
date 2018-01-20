@@ -6,11 +6,11 @@ OC.L10N.register(
     "Due today" : "Na dzisiaj",
     "Due tomorrow" : "Na jutro",
     "Due on" : "Na dzień",
-    "Started yesterday" : "Rozpoczęło się wczoraj",
+    "Started yesterday" : "Rozpoczęły się wczoraj",
     "Starts today" : "Rozpoczyna się dziś",
-    "Starts tomorrow" : "Rozpoczyna się jutro",
-    "Started on" : "Rozpoczęło się",
-    "Starts on" : "Rozpoczyna się",
+    "Starts tomorrow" : "Rozpoczynają się jutro",
+    "Started on" : "Rozpoczęły się",
+    "Starts on" : "Rozpoczynają się",
     "[Remind me yesterday at ]HH:mm" : "[Przypomnij mi jutro o ]HH:mm",
     "[Remind me today at ]HH:mm" : "[Przypomnij mi dziś o ]HH:mm",
     "[Remind me tomorrow at ]HH:mm" : "[Przypomnij mi jutro o ]HH:mm",
@@ -104,10 +104,11 @@ OC.L10N.register(
     "Alphabetically" : "Alfabetycznie",
     "Manually" : "Ręcznie",
     "Load remaining completed tasks." : "Załaduj pozostałe ukończone zadania.",
+    "All day" : "Cały dzień",
     "(New category)" : "(Nowa kategoria)",
     "Select categories..." : "Wybierz kategorie...",
     "Loading the task..." : "Ładowanie zadania...",
     "Task not found!" : "Nie znaleziono zadania!",
     "add a subtask to" : "dodaj podzadanie do"
 },
-"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");
+"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");

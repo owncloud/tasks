@@ -77,7 +77,6 @@ OC.L10N.register(
     "at the end" : "no remate",
     "at the beginning" : "no comezo",
     "Set start date" : "Estabelezer a data de comezo",
-    "{calendar} shared by {owner}" : "{calendar} compartido por {owner}",
     "Important" : "Importante",
     "Week" : "Semana",
     "All" : "Todo",
