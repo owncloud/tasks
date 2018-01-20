@@ -78,7 +78,6 @@ OC.L10N.register(
     "Delete" : "Eliminar",
     "Cancel" : "Cancelar",
     "Edit" : "Editar",
-    "Link" : "Enlace",
     "Download" : "Descargar",
     "Save" : "Guardar",
     "Add List..." : "Agregar Lista...",
