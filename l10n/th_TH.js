@@ -88,7 +88,7 @@ OC.L10N.register(
     "Delete" : "ลบ",
     "Cancel" : "ยกเลิก",
     "Edit" : "แก้ไข",
-    "Link" : "ลิงค์",
+    "Link" : "ลิงก์",
     "Download" : "ดาวน์โหลด",
     "Save" : "บันทึก",
     "Add List..." : "เพิ่มรายชื่อ ...",
