@@ -97,6 +97,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Nutikate kollektsioonide nähtavus",
     "Default" : "Vaikeväärtus",
     "Load remaining completed tasks." : "Laadi ülejäänud lõpetatud ülesanded",
+    "All day" : "Kogu päev",
     "(New category)" : "(Uus kategooria)",
     "Select categories..." : "Vali kategooriad...",
     "Loading the task..." : "Ülesande laadimine...",

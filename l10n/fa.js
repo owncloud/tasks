@@ -104,6 +104,7 @@ OC.L10N.register(
     "Alphabetically" : "بر اساس حروف الفبا",
     "Manually" : "دستی",
     "Load remaining completed tasks." : "بارگذاری باقی کارهای تکمیل شده",
+    "All day" : "هرروز",
     "(New category)" : "(دسته بندی جدید)",
     "Select categories..." : "انتخاب مجموعه...",
     "Loading the task..." : "بارگزاری کار...",

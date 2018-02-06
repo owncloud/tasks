@@ -98,6 +98,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Vizibilitatea colecțiilor inteligente",
     "Default" : "Implicită",
     "Load remaining completed tasks." : "Încarcă sarcinile efectuate rămase.",
+    "All day" : "Toată ziua",
     "(New category)" : "(Categorie nouă)",
     "Select categories..." : "Alege categoriile...",
     "Loading the task..." : "Se încarcă sarcina...",

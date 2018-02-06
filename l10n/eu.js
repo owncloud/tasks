@@ -20,7 +20,7 @@ OC.L10N.register(
     "Tomorrow" : "Bihar",
     "in %s" : "%s-an",
     "%s ago" : "duela %s",
-    "seconds" : "duela segundu batzuk",
+    "seconds" : "segundo",
     "a minute" : "minutu bat",
     "%d minutes" : "%d minutu",
     "an hour" : "ordu bat",
@@ -89,6 +89,7 @@ OC.L10N.register(
     "Start of week" : "Astearen hasiera",
     "Visibility of Smart Collections" : "Bilduma argien ikusgarritasuna",
     "Default" : "Lehenetsia",
-    "Load remaining completed tasks." : "Kargatu betetako  beste zereginak"
+    "Load remaining completed tasks." : "Kargatu betetako  beste zereginak",
+    "All day" : "Egun guztia"
 },
 "nplurals=2; plural=(n != 1);");

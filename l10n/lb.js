@@ -91,6 +91,7 @@ OC.L10N.register(
     "Settings" : "Astellungen",
     "Start of week" : "Ufank vun der Woch",
     "Default" : "Standard",
+    "All day" : "De ganzen Dag",
     "(New category)" : "(Nei Kategorie)",
     "Select categories..." : "Kategorien auswielen",
     "Loading the task..." : "D'Aufgab gëtt gelueden...",

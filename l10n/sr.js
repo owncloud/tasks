@@ -96,6 +96,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Видљивост паметних збирки",
     "Default" : "Подразумевано",
     "Load remaining completed tasks." : "Учитај преостале довршене задатке.",
+    "All day" : "Цео дан",
     "(New category)" : "(Нова категорија)",
     "Select categories..." : "Изаберите категорије...",
     "Loading the task..." : "Учитавам задатке...",

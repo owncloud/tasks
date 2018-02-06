@@ -88,6 +88,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Ağıllı yiğımların görünməsi",
     "Default" : "Susmaya görə",
     "Load remaining completed tasks." : "Gözləmədə olan bitmiş taöşırıqları yüklə.",
+    "All day" : "Bütün gün",
     "Loading the task..." : "Tapşırıq yüklkənir...",
     "Task not found!" : "Tapşırıq tapılmadı!"
 },

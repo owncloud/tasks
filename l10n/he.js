@@ -104,6 +104,7 @@ OC.L10N.register(
     "Alphabetically" : "בצורת אלף-בית",
     "Manually" : "באופן ידני",
     "Load remaining completed tasks." : "טעינת שארית הפעילויות המושלמות.",
+    "All day" : "היום",
     "(New category)" : "(קטגוריה חדשה)",
     "Select categories..." : "בחירת קטגוריות...",
     "Loading the task..." : "טעינת הפעילות...",

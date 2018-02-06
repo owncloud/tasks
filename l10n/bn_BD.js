@@ -86,6 +86,7 @@ OC.L10N.register(
     "New List" : "নতুন তালিকা",
     "Start of week" : "সপ্তাহ আরম্ভ",
     "Visibility of Smart Collections" : "চটপট সংগ্রহের দর্শনযোগ্যতা",
-    "Default" : "পূর্বনির্ধারিত"
+    "Default" : "পূর্বনির্ধারিত",
+    "All day" : "সমস্ত দিন"
 },
 "nplurals=2; plural=(n != 1);");

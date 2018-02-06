@@ -96,6 +96,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Visibilitas Koleksi Cerdas",
     "Default" : "Default",
     "Load remaining completed tasks." : "Memuat sisa tugas yang harus diselesaikan.",
+    "All day" : "Sepanjang hari",
     "(New category)" : "(Kategori baru)",
     "Select categories..." : "Pilih kategori...",
     "Loading the task..." : "Memuat tugas...",
