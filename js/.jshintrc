@@ -28,7 +28,6 @@
           "angular": true,
           "app": true,
           "OC": true,
-          "oc_current_user":true,
           "oc_requesttoken": true,
           "requestToken": true,
           "inject": true,
