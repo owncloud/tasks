@@ -64,7 +64,6 @@ OC.L10N.register(
     "Add an item in \"%s\"..." : "הוספת פריט ב- \"%s\"...",
     "Add a current item in \"%s\"..." : "הוספת פריט נוכחי ב- \"%s\"...",
     "Add a subtask to \"%s\"..." : "הוספת תת-פעילות ל- \"%s\"...",
-    "_%n Completed Task_::_%n Completed Tasks_" : ["%n פעילות מושלמת","%n פעילויות מושלמות"],
     "Hours" : "שעות",
     "Minutes" : "דקות",
     "Set due date" : "הגדרת תאריך יעד",
@@ -111,4 +110,4 @@ OC.L10N.register(
     "Task not found!" : "פעילות לא אותרה!",
     "add a subtask to" : "הוספת תת-פעילות ל-"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=4; plural=(n==1 ? 1: n == 2 ? 2 : (n % 10 == 0 and n > 10) ? 4);");

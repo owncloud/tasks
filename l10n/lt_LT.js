@@ -64,7 +64,7 @@ OC.L10N.register(
     "Add an item in \"%s\"..." : "Pridėti elementą į „%s“...",
     "Add a current item in \"%s\"..." : "Pridėti dabartinį elementą į „%s“...",
     "Add a subtask to \"%s\"..." : "Pridėti užduotį į \"%s\"...",
-    "_%n Completed Task_::_%n Completed Tasks_" : ["%n atlikta užduotis","%n atliktos užduotys","%n atliktų užduočių"],
+    "_%n Completed Task_::_%n Completed Tasks_" : ["%n atlikta užduotis","%n atliktos užduotys","%n atliktų užduočių","%n atliktų užduočių"],
     "Hours" : "Valandos",
     "Minutes" : "Minutės",
     "Set due date" : "Nustatyti atlikimo terminą",
@@ -111,4 +111,4 @@ OC.L10N.register(
     "Task not found!" : "Užduotis nerasta!",
     "add a subtask to" : "Pridėti užduotį į"
 },
-"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);");
+"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 1 : (n%10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 3 : n % 1 != 0 ? 4);");

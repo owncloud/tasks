@@ -64,7 +64,7 @@ OC.L10N.register(
     "Add an item in \"%s\"..." : "Pridať položku do \"%s\"...",
     "Add a current item in \"%s\"..." : "Pridať túto položku do \"%s\"...",
     "Add a subtask to \"%s\"..." : "Pridať podúlohu do „%s“...",
-    "_%n Completed Task_::_%n Completed Tasks_" : ["%n dokončená úloha","%n dokončené úlohy","%n dokončených úloh"],
+    "_%n Completed Task_::_%n Completed Tasks_" : ["%n dokončená úloha","%n dokončené úlohy","%n dokončených úloh","%n dokončených úloh"],
     "Hours" : "Hodín",
     "Minutes" : "Minút",
     "Set due date" : "Nastaviť do dátumu",
@@ -105,4 +105,4 @@ OC.L10N.register(
     "Task not found!" : "Úloha nebola nájdená!",
     "add a subtask to" : "pridať podúlohu do"
 },
-"nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;");
+"nplurals=4; plural=(n % 1 == 0 ? 4: n==1 ? 1: n % 1 == 0 && n>=2 && n<=4 ? 3);");

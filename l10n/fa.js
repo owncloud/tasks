@@ -64,7 +64,7 @@ OC.L10N.register(
     "Add an item in \"%s\"..." : "یک مورد در \"%s\" اضافه کنید ...",
     "Add a current item in \"%s\"..." : "یک مورد جاری در \"%s\" اضافه کنید ...",
     "Add a subtask to \"%s\"..." : "یک زیرکار در \"%s\" اضافه کنید ...",
-    "_%n Completed Task_::_%n Completed Tasks_" : ["%n کار تکمیل شده"],
+    "_%n Completed Task_::_%n Completed Tasks_" : ["%n کار تکمیل شده","%n کار تکمیل شده"],
     "Hours" : "ساعت",
     "Minutes" : "دقیقه",
     "Set due date" : "تعریف سر رسید",
@@ -111,4 +111,4 @@ OC.L10N.register(
     "Task not found!" : "کار یافت نشد!",
     "add a subtask to" : "افزودن یک زیرکار به"
 },
-"nplurals=1; plural=0;");
+"nplurals=2; plural=((n<=1 && n>= 0) ? 1);");
