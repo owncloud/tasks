@@ -111,4 +111,4 @@ OC.L10N.register(
     "Task not found!" : "کار یافت نشد!",
     "add a subtask to" : "افزودن یک زیرکار به"
 },
-"nplurals=2; plural=((n<=1 && n>= 0) ? 1);");
+"nplurals=2; plural=(n > 1);");

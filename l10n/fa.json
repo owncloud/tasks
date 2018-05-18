@@ -108,5 +108,5 @@
     "Loading the task..." : "بارگزاری کار...",
     "Task not found!" : "کار یافت نشد!",
     "add a subtask to" : "افزودن یک زیرکار به"
-},"pluralForm" :"nplurals=2; plural=((n<=1 && n>= 0) ? 1);"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
