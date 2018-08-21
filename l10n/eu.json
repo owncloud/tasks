@@ -70,6 +70,7 @@
     "at the end" : "bukaeran",
     "at the beginning" : "hasieran",
     "Set start date" : "Ezarri hasteko eguna",
+    "{calendar} shared by {owner}" : "{calendar}  {owner}-(e)k partekatua",
     "Important" : "Garrantzitsua",
     "Week" : "Astea",
     "All" : "Denak",
