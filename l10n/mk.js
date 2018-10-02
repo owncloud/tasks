@@ -71,6 +71,7 @@ OC.L10N.register(
     "at the end" : "на крајот",
     "at the beginning" : "на почетокот",
     "Set start date" : "Постави почетен датум",
+    "{calendar} shared by {owner}" : "{calendar} споделен од {owner}",
     "Important" : "Важно",
     "Week" : "Седмица",
     "All" : "Сите",
