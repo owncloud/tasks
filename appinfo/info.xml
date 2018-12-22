@@ -13,6 +13,6 @@
 	<bugs>https://github.com/owncloud/tasks/issues</bugs>
 	<repository type="git">https://github.com/owncloud/tasks.git</repository>
     <dependencies>
-        <owncloud min-version="9.1" max-version="10.0"/>
+        <owncloud min-version="9.1" max-version="10"/>
     </dependencies>
 </info>
