@@ -1,3 +1,7 @@
+## 0.9.7 - 2018-12-25
+### Changed
+- Changed max version to 10 so app update will work for ownCloud 10.1.
+
 ## 0.9.6 - 2018-02-07
 ### Reverted
 - Reverted favicons to ownCloud colors.
