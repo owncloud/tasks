@@ -78,6 +78,7 @@ OC.L10N.register(
     "at the end" : "di akhir",
     "at the beginning" : "di awal",
     "Set start date" : "Atur tanggal mulai",
+    "{calendar} shared by {owner}" : "{kalendar} dibagikan oleh {pemilik}",
     "Important" : "Penting",
     "Week" : "Minggu",
     "All" : "Semua",
