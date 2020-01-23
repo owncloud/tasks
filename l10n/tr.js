@@ -98,6 +98,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Akıllı Koleksiyon Görünürlüğü",
     "Change sort order" : "Sıralama düzenini değiştir",
     "Default" : "Öntanımlı",
+    "Due date" : "Bitiş tarihi",
     "Start date" : "Başlangıç tarihi",
     "Priority" : "Öncelik",
     "Alphabetically" : "Alfabetik olarak",
