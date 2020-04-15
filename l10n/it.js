@@ -1,7 +1,7 @@
 OC.L10N.register(
     "tasks",
     {
-    "Tasks" : "Attività",
+    "Tasks" : "Compiti",
     "Due yesterday" : "Scaduta ieri",
     "Due today" : "Scade oggi",
     "Due tomorrow" : "Scade domani",
