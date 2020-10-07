@@ -63,6 +63,7 @@ OC.L10N.register(
     "Add an item due today in \"%s\"..." : "添加今天到期的項目\"%s\"...",
     "Add an item in \"%s\"..." : "在中添加項目\"%s\"...",
     "Add a current item in \"%s\"..." : "在中添加當前項目 \"%s\"...",
+    "Add a subtask to \"%s\"..." : "將子任務添加到“%s“ ...",
     "_%n Completed Task_::_%n Completed Tasks_" : ["%n完成的任務"],
     "Hours" : "小時",
     "Minutes" : "分鐘",
@@ -100,6 +101,7 @@ OC.L10N.register(
     "(New category)" : "（新分類別）",
     "Select categories..." : "選擇類別...",
     "Loading the task..." : "正在加載任務...",
-    "Task not found!" : "找不到任務！"
+    "Task not found!" : "找不到任務！",
+    "add a subtask to" : "向添加一個子任務"
 },
 "nplurals=1; plural=0;");
