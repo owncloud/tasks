@@ -79,6 +79,7 @@ OC.L10N.register(
     "at the beginning" : "一開始",
     "Set start date" : "設定開始日期",
     "{calendar} shared by {owner}" : "{calendar} 由 {owner} 分享",
+    "Unnamed" : "未命名",
     "Important" : "重要",
     "Week" : "週",
     "All" : "所有",
