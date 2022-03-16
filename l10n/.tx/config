@@ -7,4 +7,3 @@ file_filter = <lang>/tasks.po
 source_file = templates/tasks.pot
 source_lang = en
 type = PO
-
