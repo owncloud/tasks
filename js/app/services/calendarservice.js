@@ -123,7 +123,7 @@ angular.module('Tasks').service('CalendarService', ['DavClient', 'Calendar', fun
 
 				_this._getACLFromResponse(body);
 
-				var uri = body.href.substr(_this._CALENDAR_HOME.length).replace(/[^\w\-]+/g, '');
+				var uri = body.href.slice(_this._CALENDAR_HOME.length).replace(/[^\w\-]+/g, '');
 
 				var calendar = new Calendar(body.href, body.propStat[0].properties, uri);
 				calendars.push(calendar);
@@ -156,7 +156,7 @@ angular.module('Tasks').service('CalendarService', ['DavClient', 'Calendar', fun
 
 			_this._getACLFromResponse(body);
 
-			var uri = body.href.substr(_this._CALENDAR_HOME.length).replace(/[^\w\-]+/g, '');
+			var uri = body.href.slice(_this._CALENDAR_HOME.length).replace(/[^\w\-]+/g, '');
 
 			return new Calendar(body.href, body.propStat[0].properties, uri);
 		});
@@ -440,8 +440,8 @@ angular.module('Tasks').service('CalendarService', ['DavClient', 'Calendar', fun
 
 		while (this._isUriAlreadyTaken(uri)) {
 			var positionLastDash = uri.lastIndexOf('-');
-			var firstPart = uri.substr(0, positionLastDash);
-			var lastPart = uri.substr(positionLastDash + 1);
+			var firstPart = uri.slice(0, positionLastDash !== -1 ? positionLastDash : 0);
+			var lastPart = uri.slice(positionLastDash + 1);
 
 			if (lastPart.match(/^\d+$/)) {
 				lastPart = parseInt(lastPart);
