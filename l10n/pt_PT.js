@@ -64,7 +64,7 @@ OC.L10N.register(
     "Add an item in \"%s\"..." : "Adicionar um item em \"%s\" ...",
     "Add a current item in \"%s\"..." : "Adicionar um item actual em \"%s\" ...",
     "Add a subtask to \"%s\"..." : "Adicionar sub-tarefa a \"%s\"...",
-    "_%n Completed Task_::_%n Completed Tasks_" : ["%n Tarefa Concluída","%n Tarefas Concluídas"],
+    "_%n Completed Task_::_%n Completed Tasks_" : ["%n Tarefa Concluída","%n Tarefas Concluídas","%n Tarefas Concluídas"],
     "Hours" : "Horas",
     "Minutes" : "Minutos",
     "Set due date" : "Definir data de expiração",
@@ -111,4 +111,4 @@ OC.L10N.register(
     "Task not found!" : "Tarefa não encontrada!",
     "add a subtask to" : "adicionar uma subtarefa a"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
