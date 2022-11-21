@@ -106,7 +106,7 @@ OC.L10N.register(
     "Load remaining completed tasks." : "Зареждане на останалите завършени задачи.",
     "All day" : "Цял ден",
     "(New category)" : "(Нова категория)",
-    "Select categories..." : "Избор на категории...",
+    "Select categories..." : "Избиране на категории...",
     "Loading the task..." : "Зареждане на задачата...",
     "Task not found!" : "Задачата не е намерена!",
     "add a subtask to" : "добавяне на подзадача към"
