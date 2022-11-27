@@ -78,7 +78,7 @@ OC.L10N.register(
     "at the end" : "в края",
     "at the beginning" : "в началото",
     "Set start date" : "Определяне на начална дата",
-    "{calendar} shared by {owner}" : "{calendar} споделен от {owner}",
+    "{calendar} shared by {owner}" : "{calendar} е споделен от {owner}",
     "Unnamed" : "Без име",
     "Important" : "Важно",
     "Week" : "Седмица",
