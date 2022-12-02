@@ -98,7 +98,7 @@ OC.L10N.register(
     "Visibility of Smart Collections" : "Видимост на Интелигентни колекции",
     "Change sort order" : "Промяна на реда на подреждане",
     "Default" : "По подразбиране",
-    "Due date" : "Краен срок",
+    "Due date" : "Крайна дата",
     "Start date" : "Начална дата",
     "Priority" : "Приоритет",
     "Alphabetically" : "По азбучен ред",
