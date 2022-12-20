@@ -2,7 +2,7 @@
 host = https://www.transifex.com
 lang_map = ja_JP: ja
 
-[owncloud.tasks]
+[o:owncloud-org:p:owncloud:r:tasks]
 file_filter = <lang>/tasks.po
 source_file = templates/tasks.pot
 source_lang = en
