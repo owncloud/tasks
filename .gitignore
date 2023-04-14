@@ -231,3 +231,4 @@ Various
 *.rej
 
 build/
+js/yarn.lock

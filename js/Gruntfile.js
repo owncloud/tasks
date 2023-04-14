@@ -82,43 +82,8 @@ module.exports = function(grunt) {
 				},
 				tasks: ['js']
 			}
-		},
-		karma: {
-			unit: {
-				configFile: 'config/karma.js'
-			},
-			continuous: {
-				configFile: 'config/karma.js',
-				singleRun: true,
-				browsers: ['PhantomJS'],
-				reporters: ['progress', 'junit'],
-				junitReporter: {
-					outputFile: 'test-results.xml'
-				}
-			},
-			unit_phantom: {
-				configFile: 'config/karma.js',
-				browsers: ['PhantomJS']
-			}
-		},
-		phpunit: {
-			classes: {
-				dir: '../tests'
-			},
-			options: {
-				colors: true
-			}
-		},
-		phpdocumentor: {
-			"default": {
-				options: {
-					directory: '../appinfo,../db,../controllers,../service',
-					target: '../docs'
-				}
-			}
 		}
 	});
-	grunt.registerTask('ci', ['karma:continuous']);
 	grunt.registerTask('js', ['concat', 'wrap']);
 	grunt.registerTask('default', 'js');
 };
