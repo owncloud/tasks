@@ -18,7 +18,7 @@
   "devDependencies": {
     "bower": "*",
     "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.6",
+    "grunt-cli": "~1.4.3",
     "grunt-contrib-jshint": "*",
     "jshint-stylish": "^2.1.0",
     "grunt-concurrent": "~1.0.0",
