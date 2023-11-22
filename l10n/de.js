@@ -49,7 +49,7 @@ OC.L10N.register(
     "This will delete the Calendar \"%s\" and all of its entries." : "Dadurch werden der Kalender „%s“ und alle seine Einträge gelöscht.",
     "The name \"%s\" is already used." : "Der Name „%s“ wird bereits verwendet.",
     "An empty name is not allowed." : "Ein leerer Name ist nicht erlaubt.",
-    "Hidden" : "Verborgen",
+    "Hidden" : "Ausgeblendet",
     "Visible" : "Sichtbar",
     "Automatic" : "Automatisch",
     "Sunday" : "Sonntag",
