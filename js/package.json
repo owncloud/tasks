@@ -21,7 +21,7 @@
     "grunt-cli": "~1.4.3",
     "grunt-contrib-jshint": "*",
     "jshint-stylish": "^2.1.0",
-    "grunt-concurrent": "~1.0.0",
+    "grunt-concurrent": "~3.0.0",
     "grunt-contrib-concat": "~0.1.2",
     "grunt-contrib-less": "~0.6.4",
     "grunt-contrib-watch": "~0.2.0",
