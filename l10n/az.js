@@ -84,6 +84,7 @@ OC.L10N.register(
     "Save" : "Saxla",
     "Add List..." : "Siyahını əlavə et...",
     "New List" : "Yeni Siyahı",
+    "Settings" : "Quraşdırmalar",
     "Start of week" : "Həftə başlanğıcı",
     "Visibility of Smart Collections" : "Ağıllı yiğımların görünməsi",
     "Default" : "Susmaya görə",

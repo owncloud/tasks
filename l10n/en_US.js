@@ -85,6 +85,7 @@ OC.L10N.register(
     "All" : "All",
     "Current" : "Current",
     "Completed" : "Completed",
+    "Delete" : "Delete",
     "Cancel" : "Cancel",
     "Edit" : "Edit",
     "Link" : "Link",
