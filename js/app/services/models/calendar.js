@@ -32,7 +32,7 @@ angular.module('Tasks').factory('Calendar', ['$rootScope', '$filter', '$window',
 		props.color = props['{http://apple.com/ns/ical/}calendar-color'];
 		if (typeof props.color !== 'undefined') {
 			if (props.color.length === 9) {
-				props.color = props.color.substr(0,7);
+				props.color = props.color.slice(0,7);
 			}
 		} else {
 			props.color = '#1d2d44';
@@ -126,14 +126,14 @@ angular.module('Tasks').factory('Calendar', ['$rootScope', '$filter', '$window',
 
 				if (href.startsWith('principal:principals/users/')) {
 					this._properties.sharedWith.users.push({
-						id: href.substr(27),
-						displayname: href.substr(27),
+						id: href.slice(27),
+						displayname: href.slice(27),
 						writable: readWrite
 					});
 				} else if (href.startsWith('principal:principals/groups/')) {
 					this._properties.sharedWith.groups.push({
-						id: href.substr(28),
-						displayname: href.substr(28),
+						id: href.slice(28),
+						displayname: href.slice(28),
 						writable: readWrite
 					});
 				}
@@ -144,7 +144,7 @@ angular.module('Tasks').factory('Calendar', ['$rootScope', '$filter', '$window',
 		if (typeof owner !== 'undefined' && owner.length !== 0) {
 			owner = owner[0].textContent.slice(0, -1);
 			if (owner.startsWith('/remote.php/dav/principals/users/')) {
-				this._properties.owner = owner.substr(33);
+				this._properties.owner = owner.slice(33);
 			}
 		}
 
@@ -222,9 +222,9 @@ angular.module('Tasks').factory('Calendar', ['$rootScope', '$filter', '$window',
 					c = color.match(regex)[1];
 					if (c) {
 						return this._generateTextColor(
-							parseInt(c.substr(0,2),16),
-							parseInt(c.substr(2,2),16),
-							parseInt(c.substr(4,2),16)
+							parseInt(c.slice(0,2),16),
+							parseInt(c.slice(2,4),16),
+							parseInt(c.slice(4,6),16)
 						);
 					}
 					return fallbackColor;

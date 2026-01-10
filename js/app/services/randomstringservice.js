@@ -25,7 +25,7 @@ angular.module('Tasks').factory('RandomStringService', function () {
 
 	return {
 		generate: function() {
-			return Math.random().toString(36).substr(2);
+			return Math.random().toString(36).slice(2);
 		}
 	};
 });

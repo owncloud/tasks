@@ -117,7 +117,7 @@ angular.module('Tasks').service('VTodoService', ['DavClient', 'RandomStringServi
 				var object = response.body[i];
 				var properties = object.propStat[0].properties;
 
-				var uri = object.href.substr(object.href.lastIndexOf('/') + 1);
+				var uri = object.href.slice(object.href.lastIndexOf('/') + 1);
 
 				var vTodo = {
 					calendar: calendar,
