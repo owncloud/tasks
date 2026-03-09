@@ -2,7 +2,7 @@
 <info>
 	<id>tasks</id>
 	<name>Tasks</name>
-	<version>0.9.7</version>
+	<version>0.10.0</version>
 	<namespace>Tasks</namespace>
 	<category>productivity</category>
 	<licence>AGPL</licence>
@@ -13,6 +13,6 @@
 	<bugs>https://github.com/owncloud/tasks/issues</bugs>
 	<repository type="git">https://github.com/owncloud/tasks.git</repository>
     <dependencies>
-        <owncloud min-version="9.1" max-version="10"/>
+        <owncloud min-version="10.15" max-version="11"/>
     </dependencies>
 </info>
